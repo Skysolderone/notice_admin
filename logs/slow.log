@@ -1,0 +1,1 @@
+{"@timestamp":"2025-08-24T17:52:34.440+08:00","caller":"handler/loghandler.go:131","content":"[HTTP] 200 - POST /notice_token - [::1]:56614 - curl/8.7.1 - slowcall(694.9ms)","duration":"694.9ms","level":"slow","span":"2920ef790f2b9b96","trace":"7ac99865dcddaf14fb720d4f88e36f07"}

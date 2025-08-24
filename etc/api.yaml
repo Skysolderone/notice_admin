@@ -1,0 +1,13 @@
+Name: notice-api
+Host: 0.0.0.0
+Port: 5555
+Log:
+  ServiceName: notice-api
+  Mode: file
+  Path: ./logs
+  Level: info
+  Compress: true
+  KeepDays: 7
+  MaxBackups: 3
+  MaxSize: 500
+  Encoding: json
