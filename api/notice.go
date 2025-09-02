@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"notice/api/config"
+	"notice/api/expo"
 	"notice/api/rsi"
-	"notice/rpc/expo"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -49,7 +49,8 @@ func main() {
 	})
 	server.AddRoute(rest.Route{
 		Method: http.MethodPost,
-		Path:   "/notice_token",
+
+		Path: "/notice_token",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("add token")
 			token := r.FormValue("token")

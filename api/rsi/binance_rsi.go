@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"notice/rpc/expo"
+	"notice/api/expo"
 
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
