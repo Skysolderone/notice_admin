@@ -11,7 +11,7 @@ import (
 
 func TestExpo_Send(t *testing.T) {
 	expo := GetExpoClient()
-	testToken := "ExponentPushToken[NfJX5OPserm2ZvCAKIMNok]"
+	testToken := "ExponentPushToken[exsnUAGvojZv3ffSYpG5Mr]"
 
 	// 1. 验证 Token
 	t.Log("=== 验证 Token 有效性 ===")

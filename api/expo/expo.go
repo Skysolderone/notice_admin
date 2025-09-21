@@ -85,10 +85,18 @@ func (e *Expo) GetTokens() []expo.ExponentPushToken {
 }
 
 func (e *Expo) Send(message string) error {
-	return e.SendWithRetry(message, 3)
+	return e.SendWithCustomTitle(message, "Rsi_signal")
+}
+
+func (e *Expo) SendWithCustomTitle(message, title string) error {
+	return e.SendWithCustomTitleAndRetry(message, title, 3)
 }
 
 func (e *Expo) SendWithRetry(message string, maxRetries int) error {
+	return e.SendWithCustomTitleAndRetry(message, "Rsi_signal", maxRetries)
+}
+
+func (e *Expo) SendWithCustomTitleAndRetry(message, title string, maxRetries int) error {
 	var lastErr error
 
 	for attempt := 1; attempt <= maxRetries; attempt++ {
@@ -101,7 +109,7 @@ func (e *Expo) SendWithRetry(message string, maxRetries int) error {
 				Body:       message,
 				Data:       map[string]string{"withSome": "data"},
 				Sound:      "default",
-				Title:      "Rsi_signal",
+				Title:      title,
 				Priority:   expo.HighPriority,
 				TTLSeconds: 0,
 			},

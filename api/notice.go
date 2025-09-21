@@ -4,16 +4,18 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"time"
 
 	"notice/api/config"
 	"notice/api/expo"
+	"notice/api/listen"
+	"notice/api/margin_push"
 	"notice/api/rsi"
 
 	"notice/api/websocket"
-
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -140,7 +142,19 @@ func main() {
 			count := expo.GetExpoClient().GetTokenCount()
 			w.WriteHeader(http.StatusOK)
 			w.Write([]byte(fmt.Sprintf("Token added successfully. Total tokens: %d", count)))
-			expo.GetExpoClient().Send("成功订阅rsi通知")
+			
+			// 异步发送订阅通知，确保expo客户端已正确初始化
+			go func() {
+				client := expo.GetExpoClient()
+				if client != nil && client.GetTokenCount() > 0 {
+					err := client.SendWithCustomTitle("🎉 订阅成功！\n您已成功订阅清算监控通知\n\n功能包括：\n• 大额清算实时告警\n• 定时统计报告 (1h/4h/8h/24h)\n• 多空单详细分析", "订阅通知")
+					if err != nil {
+						log.Printf("发送订阅通知失败: %v", err)
+					} else {
+						log.Printf("订阅通知发送成功")
+					}
+				}
+			}()
 		},
 	})
 
@@ -266,7 +280,9 @@ func main() {
 			}
 		},
 	})
-
+	log.SetFlags(log.LstdFlags | log.Lshortfile)
+	log.Println("启动清算订单监控程序...")
+	go margin_push.ForceReceive()
 	// 启动币安 RSI 任务（BTCUSDT 1m/5m/15m/1h，RSI(14)）- 修改为更短周期便于测试
 	go rsi.StartBinanceRSI("btcusdt", "2h", 14)
 	go rsi.StartBinanceRSI("btcusdt", "4h", 14)
@@ -277,6 +293,7 @@ func main() {
 	go rsi.StartBinanceRSI("ethusdt", "1d", 14)
 	go rsi.StartBinanceRSI("ethusdt", "1w", 14)
 
+	go listen.StartListen()
 	logx.Infof("Server starting on %s:%d", c.Host, c.Port)
 	server.Start()
 }
