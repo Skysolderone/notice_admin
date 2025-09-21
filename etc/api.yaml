@@ -6,8 +6,24 @@ Log:
   Mode: file
   Path: ./logs
   Level: info
-  Compress: true
+  Compress: false
   KeepDays: 7
   MaxBackups: 3
   MaxSize: 500
-  Encoding: json
+  Encoding: plain
+  TimeFormat: 2006-01-02 15:04:05
+WebSockets:
+  - Name: "main"
+    URL: "wss://example.com/ws"
+    ReconnectDelay: 5
+    MaxReconnects: 0
+    PingInterval: 30
+    HandshakeTimeout: 10
+    Headers:
+      Authorization: "Bearer your-token"
+  - Name: "backup"
+    URL: "wss://backup.example.com/ws"
+    ReconnectDelay: 10
+    MaxReconnects: 5
+    PingInterval: 60
+    HandshakeTimeout: 15

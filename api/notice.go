@@ -5,11 +5,15 @@ import (
 	"flag"
 	"fmt"
 	"net/http"
+	"os"
 	"time"
 
 	"notice/api/config"
 	"notice/api/expo"
 	"notice/api/rsi"
+
+	"notice/api/websocket"
+
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -25,9 +29,70 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
+	// 确保日志目录存在
+	if err := os.MkdirAll("./logs", 0o755); err != nil {
+		fmt.Printf("Failed to create logs directory: %v\n", err)
+	}
+
+	// 直接写死的WebSocket连接配置
+	hardcodedWSConfigs := []config.WebSocketConfig{
+		{
+			Name:             "binance",
+			URL:              "wss://fstream.binance.com/ws/btcusdt@kline_1m",
+			ReconnectDelay:   5,
+			MaxReconnects:    0,
+			PingInterval:     30,
+			HandshakeTimeout: 10,
+		},
+		{
+			Name:             "coinbase",
+			URL:              "wss://ws-feed.exchange.coinbase.com",
+			ReconnectDelay:   3,
+			MaxReconnects:    0,
+			PingInterval:     25,
+			HandshakeTimeout: 10,
+		},
+	}
+
+	// 初始化多个WebSocket连接器
+	wsConnectors := make(map[string]*websocket.WebSocketConnector)
+
+	// 使用写死的配置
+	for _, wsConfig := range hardcodedWSConfigs {
+		connector := websocket.NewWebSocketConnector(wsConfig)
+
+		// 设置消息处理器
+		connector.SetMessageHandler(func(messageType int, data []byte) error {
+			logx.Infof("WebSocket [%s] received message: %s", wsConfig.Name, string(data))
+			// 可以在这里处理接收到的消息
+			return nil
+		})
+
+		// 设置连接回调
+		connector.SetOnConnect(func() {
+			logx.Infof("WebSocket [%s] connected successfully", wsConfig.Name)
+		})
+
+		// 设置断开回调
+		connector.SetOnDisconnect(func(err error) {
+			logx.Errorf("WebSocket [%s] disconnected: %v", wsConfig.Name, err)
+		})
+
+		// 启动连接器
+		connector.Start()
+		wsConnectors[wsConfig.Name] = connector
+		logx.Infof("WebSocket connector [%s] started for URL: %s", wsConfig.Name, wsConfig.URL)
+	}
+
 	// 创建 go-zero REST 服务，集成静态文件服务
 	server := rest.MustNewServer(c.RestConf)
-	defer server.Stop()
+	defer func() {
+		server.Stop()
+		for name, connector := range wsConnectors {
+			logx.Infof("Closing WebSocket connector: %s", name)
+			connector.Close()
+		}
+	}()
 
 	// 初始化 SSE 处理
 	sseHandler := rsi.NewSseHandler()
