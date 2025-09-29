@@ -5,7 +5,7 @@ import (
 	"time"
 
 	data "notice/api/blockbeat"
-	"notice/api/expo"
+	"notice/api/notification"
 )
 
 func StartListen() {
@@ -15,7 +15,7 @@ func StartListen() {
 			if msg == "" {
 				continue
 			}
-			err := expo.GetExpoClient().Send(msg)
+			err := notification.SendNotification(msg, "news")
 			if err != nil {
 				log.Println(err)
 			}

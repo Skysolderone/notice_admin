@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"notice/api/expo"
+	"notice/api/notification"
 
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
@@ -170,16 +170,16 @@ func StartBinanceRSI(symbol, interval string, period int) {
 				ts := time.UnixMilli(lastTs).Format(time.RFC3339)
 				msg := fmt.Sprintf("[RSI] warmup done %s %s RSI(%d)=%.2f @ %s", strings.ToUpper(symbol), interval, period, lastVal, ts)
 				logx.Infof("RSI warmup signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
-				expo.GetExpoClient().Send(msg)
+				notification.SendNotification(msg, "rsi")
 			} else {
 				msg := fmt.Sprintf("[RSI] warmup pending %s %s need more candles", strings.ToUpper(symbol), interval)
 				logx.Infof("RSI warmup pending signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
-				expo.GetExpoClient().Send(msg)
+				notification.SendNotification(msg, "rsi")
 			}
 		} else {
 			msg := fmt.Sprintf("[RSI] warmup error: %v", err)
 			logx.Errorf("RSI warmup error signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
-			expo.GetExpoClient().Send(msg)
+			notification.SendNotification(msg, "rsi")
 		}
 
 		dialer := websocket.Dialer{
@@ -198,7 +198,7 @@ func StartBinanceRSI(symbol, interval string, period int) {
 		// 若 warmup 期间无法获得足够K线，WS 收到的后续 close 会逐步完成初始化
 		msg := fmt.Sprintf("[RSI] connected %s %s period=%d", strings.ToUpper(symbol), interval, period)
 		logx.Infof("RSI connection signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
-		expo.GetExpoClient().Send(msg)
+		notification.SendNotification(msg, "rsi")
 		// reset backoff on successful connect
 		backoff = time.Second
 
@@ -226,7 +226,7 @@ func StartBinanceRSI(symbol, interval string, period int) {
 			ts := time.UnixMilli(ev.K.CloseTime).Format(time.RFC3339)
 			msg := fmt.Sprintf("%s %s close=%.2f RSI(%d)=%.2f @ %s", strings.ToUpper(symbol), interval, closePrice, period, value, ts)
 			logx.Infof("RSI signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
-			expo.GetExpoClient().Send(msg)
+			notification.SendNotification(msg, "rsi")
 		}
 		// loop to reconnect
 	}
