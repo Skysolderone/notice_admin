@@ -111,7 +111,7 @@ func main() {
 	// 添加测试页面路由
 	server.AddRoute(rest.Route{
 		Method: http.MethodGet,
-		Path:   "/test",
+		Path:   "/notice/test",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			http.ServeFile(w, r, "test_sse.html")
 		},
@@ -298,7 +298,7 @@ func main() {
 	// 获取消息历史记录API
 	server.AddRoute(rest.Route{
 		Method: http.MethodGet,
-		Path:   "/messages",
+		Path:   "/notice/messages",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			// 获取查询参数
 			limitStr := r.URL.Query().Get("limit")
@@ -351,7 +351,7 @@ func main() {
 	// 获取消息统计信息API
 	server.AddRoute(rest.Route{
 		Method: http.MethodGet,
-		Path:   "/messages/stats",
+		Path:   "/notice/messages/stats",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			count, err := storage.GetMessageStorage().GetMessageCount()
 			if err != nil {
@@ -390,7 +390,7 @@ func main() {
 	// 按时间范围获取消息API
 	server.AddRoute(rest.Route{
 		Method: http.MethodGet,
-		Path:   "/messages/range",
+		Path:   "/notice/messages/range",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			startStr := r.URL.Query().Get("start")
 			endStr := r.URL.Query().Get("end")

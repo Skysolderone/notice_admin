@@ -7,17 +7,42 @@
 ## 基本信息
 
 - **服务器地址**: `http://localhost:5555`
+- **API前缀**: `/notice`
 - **响应格式**: JSON
-- **支持方法**: GET
+- **支持方法**: GET/POST
 - **认证方式**: 无需认证
 
 ## API 接口
+
+### 推送通知相关接口
+
+#### 添加推送令牌
+```
+POST /notice/notice_token
+```
+
+#### 获取令牌统计
+```
+GET /notice/notice_token/stats
+```
+
+#### 发送手动通知
+```
+POST /notice/notice/query
+```
+
+#### Webhook接收
+```
+POST /notice/webhook
+```
+
+### 消息查询相关接口
 
 ### 1. 获取消息历史记录
 
 #### 接口地址
 ```
-GET /messages
+GET /notice/messages
 ```
 
 #### 请求参数
@@ -31,19 +56,19 @@ GET /messages
 
 ```bash
 # 获取所有消息
-curl http://localhost:5555/messages
+curl http://localhost:5555/notice/messages
 
 # 获取最近10条消息
-curl http://localhost:5555/messages?limit=10
+curl http://localhost:5555/notice/messages?limit=10
 
 # 获取RSI相关的消息
-curl http://localhost:5555/messages?source=rsi
+curl http://localhost:5555/notice/messages?source=rsi
 
 # 获取清算相关的消息
-curl http://localhost:5555/messages?source=liquidation
+curl http://localhost:5555/notice/messages?source=liquidation
 
 # 组合查询：获取最近20条RSI消息
-curl http://localhost:5555/messages?limit=20&source=rsi
+curl http://localhost:5555/notice/messages?limit=20&source=rsi
 ```
 
 #### 响应示例
@@ -79,7 +104,7 @@ curl http://localhost:5555/messages?limit=20&source=rsi
 
 #### 接口地址
 ```
-GET /messages/stats
+GET /notice/messages/stats
 ```
 
 #### 请求参数
@@ -88,7 +113,7 @@ GET /messages/stats
 #### 请求示例
 
 ```bash
-curl http://localhost:5555/messages/stats
+curl http://localhost:5555/notice/messages/stats
 ```
 
 #### 响应示例
@@ -111,7 +136,7 @@ curl http://localhost:5555/messages/stats
 
 #### 接口地址
 ```
-GET /messages/range
+GET /notice/messages/range
 ```
 
 #### 请求参数
@@ -125,13 +150,13 @@ GET /messages/range
 
 ```bash
 # 查询今天的消息
-curl "http://localhost:5555/messages/range?start=2024-01-01T00:00:00Z&end=2024-01-01T23:59:59Z"
+curl "http://localhost:5555/notice/messages/range?start=2024-01-01T00:00:00Z&end=2024-01-01T23:59:59Z"
 
 # 查询最近1小时的消息
-curl "http://localhost:5555/messages/range?start=2024-01-01T10:00:00Z&end=2024-01-01T11:00:00Z"
+curl "http://localhost:5555/notice/messages/range?start=2024-01-01T10:00:00Z&end=2024-01-01T11:00:00Z"
 
 # 查询特定时间段
-curl "http://localhost:5555/messages/range?start=2024-01-01T09:00:00Z&end=2024-01-01T17:00:00Z"
+curl "http://localhost:5555/notice/messages/range?start=2024-01-01T09:00:00Z&end=2024-01-01T17:00:00Z"
 ```
 
 #### 响应示例
@@ -171,12 +196,13 @@ curl "http://localhost:5555/messages/range?start=2024-01-01T09:00:00Z&end=2024-0
 class MessageAPI {
   constructor(baseURL = 'http://localhost:5555') {
     this.baseURL = baseURL;
+    this.apiPrefix = '/notice';
   }
 
   // 获取消息历史
   async getMessages(limit = 50, source = '') {
     try {
-      let url = `${this.baseURL}/messages?limit=${limit}`;
+      let url = `${this.baseURL}${this.apiPrefix}/messages?limit=${limit}`;
       if (source) {
         url += `&source=${source}`;
       }
@@ -198,7 +224,7 @@ class MessageAPI {
   // 获取统计信息
   async getStats() {
     try {
-      const response = await fetch(`${this.baseURL}/messages/stats`);
+      const response = await fetch(`${this.baseURL}${this.apiPrefix}/messages/stats`);
       const data = await response.json();
 
       if (data.success) {
@@ -218,7 +244,7 @@ class MessageAPI {
   // 按时间范围查询
   async getMessagesByTimeRange(startTime, endTime) {
     try {
-      const url = `${this.baseURL}/messages/range?start=${startTime}&end=${endTime}`;
+      const url = `${this.baseURL}${this.apiPrefix}/messages/range?start=${startTime}&end=${endTime}`;
       const response = await fetch(url);
       const data = await response.json();
 
@@ -280,6 +306,7 @@ from typing import List, Dict, Optional
 class MessageAPI:
     def __init__(self, base_url: str = "http://localhost:5555"):
         self.base_url = base_url
+        self.api_prefix = "/notice"
 
     def get_messages(self, limit: Optional[int] = None, source: Optional[str] = None) -> List[Dict]:
         """获取消息历史"""
@@ -289,7 +316,7 @@ class MessageAPI:
         if source:
             params['source'] = source
 
-        response = requests.get(f"{self.base_url}/messages", params=params)
+        response = requests.get(f"{self.base_url}{self.api_prefix}/messages", params=params)
         response.raise_for_status()
 
         data = response.json()
@@ -300,7 +327,7 @@ class MessageAPI:
 
     def get_stats(self) -> Dict:
         """获取统计信息"""
-        response = requests.get(f"{self.base_url}/messages/stats")
+        response = requests.get(f"{self.base_url}{self.api_prefix}/messages/stats")
         response.raise_for_status()
 
         data = response.json()
@@ -319,7 +346,7 @@ class MessageAPI:
             'end': end_time
         }
 
-        response = requests.get(f"{self.base_url}/messages/range", params=params)
+        response = requests.get(f"{self.base_url}{self.api_prefix}/messages/range", params=params)
         response.raise_for_status()
 
         data = response.json()

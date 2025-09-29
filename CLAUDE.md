@@ -91,16 +91,16 @@ go mod tidy
 ### 服务架构
 
 ```
-HTTP API (端口 5555)
-├── /notice_token (POST) - 添加推送通知令牌
-├── /notice_token/stats (GET) - 获取令牌统计信息
-├── /notice/query (POST) - 发送手动通知
-├── /webhook (POST) - 接收 webhook 通知
-├── /sse (GET) - 服务端发送事件端点
-├── /test (GET) - SSE 测试页面
-├── /messages (GET) - 获取消息历史记录
-├── /messages/stats (GET) - 获取消息统计信息
-└── /messages/range (GET) - 按时间范围获取消息
+HTTP API (端口 5555，前缀 /notice)
+├── /notice/notice_token (POST) - 添加推送通知令牌
+├── /notice/notice_token/stats (GET) - 获取令牌统计信息
+├── /notice/notice/query (POST) - 发送手动通知
+├── /notice/webhook (POST) - 接收 webhook 通知
+├── /notice/sse (GET) - 服务端发送事件端点
+├── /notice/test (GET) - SSE 测试页面
+├── /notice/messages (GET) - 获取消息历史记录
+├── /notice/messages/stats (GET) - 获取消息统计信息
+└── /notice/messages/range (GET) - 按时间范围获取消息
 
 后台服务:
 ├── margin_push.ForceReceive() - 币安期货清算监控（每小时/每日统计）
@@ -190,29 +190,29 @@ HTTP API (端口 5555)
 #### 获取消息历史记录
 ```bash
 # 获取所有消息
-GET /messages
+GET /notice/messages
 
 # 获取最近 50 条消息
-GET /messages?limit=50
+GET /notice/messages?limit=50
 
 # 按来源过滤消息
-GET /messages?source=rsi
-GET /messages?source=liquidation
-GET /messages?source=news
-GET /messages?source=manual
-GET /messages?source=webhook
+GET /notice/messages?source=rsi
+GET /notice/messages?source=liquidation
+GET /notice/messages?source=news
+GET /notice/messages?source=manual
+GET /notice/messages?source=webhook
 ```
 
 #### 获取消息统计信息
 ```bash
 # 获取消息总数和按来源分类的统计
-GET /messages/stats
+GET /notice/messages/stats
 ```
 
 #### 按时间范围查询消息
 ```bash
 # 查询指定时间范围内的消息（RFC3339 格式）
-GET /messages/range?start=2024-01-01T00:00:00Z&end=2024-01-01T23:59:59Z
+GET /notice/messages/range?start=2024-01-01T00:00:00Z&end=2024-01-01T23:59:59Z
 ```
 
 #### 响应格式示例
