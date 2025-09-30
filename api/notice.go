@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"notice/api/config"
@@ -14,6 +15,7 @@ import (
 	"notice/api/listen"
 	"notice/api/margin_push"
 	"notice/api/rsi"
+	"notice/api/storage"
 
 	"notice/api/websocket"
 
@@ -109,7 +111,7 @@ func main() {
 	// 添加测试页面路由
 	server.AddRoute(rest.Route{
 		Method: http.MethodGet,
-		Path:   "/test",
+		Path:   "/notice/test",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			http.ServeFile(w, r, "test_sse.html")
 		},
@@ -142,7 +144,7 @@ func main() {
 			count := expo.GetExpoClient().GetTokenCount()
 			w.WriteHeader(http.StatusOK)
 			w.Write([]byte(fmt.Sprintf("Token added successfully. Total tokens: %d", count)))
-			
+
 			// 异步发送订阅通知，确保expo客户端已正确初始化
 			go func() {
 				client := expo.GetExpoClient()
@@ -214,7 +216,13 @@ func main() {
 			// 记录信号日志
 			logx.Infof("Signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), data)
 
-			err := expo.GetExpoClient().Send(data)
+			// 保存消息到存储
+			err := storage.GetMessageStorage().SaveMessage(data, "manual")
+			if err != nil {
+				logx.Errorf("Failed to save message to storage: %v", err)
+			}
+
+			err = expo.GetExpoClient().Send(data)
 			if err != nil {
 				logx.Errorf("Failed to send signal: %s, error: %v", data, err)
 				w.WriteHeader(http.StatusInternalServerError)
@@ -313,8 +321,14 @@ func main() {
 			// 记录准备发送的信号
 			logx.Infof("Webhook signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), message)
 
+			// 保存消息到存储
+			err := storage.GetMessageStorage().SaveMessage(message, "webhook")
+			if err != nil {
+				logx.Errorf("Failed to save webhook message to storage: %v", err)
+			}
+
 			// Send notification
-			err := expo.GetExpoClient().Send(message)
+			err = expo.GetExpoClient().Send(message)
 			if err != nil {
 				logx.Errorf("Failed to send webhook signal: %s, error: %v", message, err)
 				w.WriteHeader(http.StatusInternalServerError)
@@ -326,6 +340,149 @@ func main() {
 			}
 		},
 	})
+
+	// 获取消息历史记录API
+	server.AddRoute(rest.Route{
+		Method: http.MethodGet,
+		Path:   "/notice/messages",
+		Handler: func(w http.ResponseWriter, r *http.Request) {
+			// 获取查询参数
+			limitStr := r.URL.Query().Get("limit")
+			sourceFilter := r.URL.Query().Get("source")
+
+			var limit int
+			if limitStr != "" {
+				var err error
+				limit, err = strconv.Atoi(limitStr)
+				if err != nil {
+					w.WriteHeader(http.StatusBadRequest)
+					w.Write([]byte("Invalid limit parameter"))
+					return
+				}
+			}
+
+			// 获取消息记录
+			messages, err := storage.GetMessageStorage().GetMessages(limit)
+			if err != nil {
+				logx.Errorf("Failed to get messages: %v", err)
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Failed to retrieve messages"))
+				return
+			}
+
+			// 按source过滤（如果指定）
+			if sourceFilter != "" {
+				var filteredMessages []storage.MessageRecord
+				for _, msg := range messages {
+					if msg.Source == sourceFilter {
+						filteredMessages = append(filteredMessages, msg)
+					}
+				}
+				messages = filteredMessages
+			}
+
+			// 构建响应
+			response := map[string]interface{}{
+				"success": true,
+				"count":   len(messages),
+				"data":    messages,
+			}
+
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusOK)
+			json.NewEncoder(w).Encode(response)
+		},
+	})
+
+	// 获取消息统计信息API
+	server.AddRoute(rest.Route{
+		Method: http.MethodGet,
+		Path:   "/notice/messages/stats",
+		Handler: func(w http.ResponseWriter, r *http.Request) {
+			count, err := storage.GetMessageStorage().GetMessageCount()
+			if err != nil {
+				logx.Errorf("Failed to get message count: %v", err)
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Failed to get message statistics"))
+				return
+			}
+
+			// 获取最近的消息分析不同来源的数量
+			messages, err := storage.GetMessageStorage().GetMessages(0)
+			if err != nil {
+				logx.Errorf("Failed to get messages for stats: %v", err)
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Failed to get message statistics"))
+				return
+			}
+
+			sourceStats := make(map[string]int)
+			for _, msg := range messages {
+				sourceStats[msg.Source]++
+			}
+
+			response := map[string]interface{}{
+				"success":      true,
+				"total_count":  count,
+				"source_stats": sourceStats,
+			}
+
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusOK)
+			json.NewEncoder(w).Encode(response)
+		},
+	})
+
+	// 按时间范围获取消息API
+	server.AddRoute(rest.Route{
+		Method: http.MethodGet,
+		Path:   "/notice/messages/range",
+		Handler: func(w http.ResponseWriter, r *http.Request) {
+			startStr := r.URL.Query().Get("start")
+			endStr := r.URL.Query().Get("end")
+
+			if startStr == "" || endStr == "" {
+				w.WriteHeader(http.StatusBadRequest)
+				w.Write([]byte("start and end parameters are required (format: 2006-01-02T15:04:05Z)"))
+				return
+			}
+
+			start, err := time.Parse(time.RFC3339, startStr)
+			if err != nil {
+				w.WriteHeader(http.StatusBadRequest)
+				w.Write([]byte("Invalid start time format"))
+				return
+			}
+
+			end, err := time.Parse(time.RFC3339, endStr)
+			if err != nil {
+				w.WriteHeader(http.StatusBadRequest)
+				w.Write([]byte("Invalid end time format"))
+				return
+			}
+
+			messages, err := storage.GetMessageStorage().GetMessagesByTimeRange(start, end)
+			if err != nil {
+				logx.Errorf("Failed to get messages by time range: %v", err)
+				w.WriteHeader(http.StatusInternalServerError)
+				w.Write([]byte("Failed to retrieve messages"))
+				return
+			}
+
+			response := map[string]interface{}{
+				"success": true,
+				"count":   len(messages),
+				"start":   start,
+				"end":     end,
+				"data":    messages,
+			}
+
+			w.Header().Set("Content-Type", "application/json")
+			w.WriteHeader(http.StatusOK)
+			json.NewEncoder(w).Encode(response)
+		},
+	})
+
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Println("启动清算订单监控程序...")
 	go margin_push.ForceReceive()

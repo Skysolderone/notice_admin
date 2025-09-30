@@ -107,11 +107,12 @@ func (e *Expo) SendWithCustomTitleAndRetry(message, title string, maxRetries int
 			&expo.PushMessage{
 				To:         e.pushToken,
 				Body:       message,
-				Data:       map[string]string{"withSome": "data"},
+				Data:       map[string]string{"withSome": "data", "format": "html"},
 				Sound:      "default",
 				Title:      title,
 				Priority:   expo.HighPriority,
 				TTLSeconds: 0,
+				ChannelID:  "default",
 			},
 		)
 		// Check network/client errors
@@ -210,12 +211,13 @@ func (e *Expo) SendToSpecificToken(token, message string) error {
 
 	response, err := e.client.Publish(
 		&expo.PushMessage{
-			To:       []expo.ExponentPushToken{validtoken},
-			Body:     message,
-			Data:     map[string]string{"timestamp": time.Now().Format(time.RFC3339)},
-			Sound:    "default",
-			Title:    "测试推送",
-			Priority: expo.HighPriority,
+			To:        []expo.ExponentPushToken{validtoken},
+			Body:      message,
+			Data:      map[string]string{"timestamp": time.Now().Format(time.RFC3339), "format": "html"},
+			Sound:     "default",
+			Title:     "测试推送",
+			Priority:  expo.HighPriority,
+			ChannelID: "default",
 		},
 	)
 	if err != nil {

@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"notice/api/expo"
+	"notice/api/notification"
 
 	"github.com/adshao/go-binance/v2/futures"
 )
@@ -192,6 +193,15 @@ func NewStats() *Stats {
 
 var globalStats = NewStats()
 
+// formatToWan 将USDT金额转换为万单位显示
+func formatToWan(value float64) string {
+	if value >= 10000 {
+		wan := value / 10000
+		return fmt.Sprintf("%.2fw", wan)
+	}
+	return fmt.Sprintf("%.2f", value)
+}
+
 // 发送启动通知
 func sendStartupNotification() {
 	message := fmt.Sprintf("🚀 清算监控系统启动\n"+
@@ -208,7 +218,7 @@ func sendStartupNotification() {
 		
 		client := expo.GetExpoClient()
 		if client != nil && client.GetTokenCount() > 0 {
-			err := client.SendWithCustomTitle(message, "清算监控系统")
+			err := notification.SendNotificationWithTitle(message, "清算监控系统", "liquidation")
 			if err != nil {
 				log.Printf("发送启动通知推送失败: %v", err)
 			} else {
@@ -284,8 +294,8 @@ func logStats(period string) {
 		count, quantity, value, longCount, shortCount, longValue, shortValue, timeKey := globalStats.GetCurrentHourStats()
 		log.Printf("[%s统计] UTC时间: %s, 清算订单数: %d, 总数量: %.4f, 总价值: %.4f",
 			period, timeKey, count, quantity, value)
-		log.Printf("   多单: %d笔 价值: %.2f USDT, 空单: %d笔 价值: %.2f USDT",
-			longCount, longValue, shortCount, shortValue)
+		log.Printf("   多单: %d笔 价值: %s USDT, 空单: %d笔 价值: %s USDT",
+			longCount, formatToWan(longValue), shortCount, formatToWan(shortValue))
 
 		// 发送1小时统计推送通知
 		sendStatsReport(period, count, quantity, value, longCount, shortCount, longValue, shortValue, timeKey)
@@ -295,8 +305,8 @@ func logStats(period string) {
 		count, quantity, value, longCount, shortCount, longValue, shortValue, periods := globalStats.GetPeriodStats(4)
 		log.Printf("[%s统计] UTC时间: %s, 过去4小时清算订单数: %d, 总数量: %.4f, 总价值: %.4f",
 			period, now.Format("2006-01-02 15:04"), count, quantity, value)
-		log.Printf("   多单: %d笔 价值: %.2f USDT, 空单: %d笔 价值: %.2f USDT",
-			longCount, longValue, shortCount, shortValue)
+		log.Printf("   多单: %d笔 价值: %s USDT, 空单: %d笔 价值: %s USDT",
+			longCount, formatToWan(longValue), shortCount, formatToWan(shortValue))
 		log.Printf("   包含时段: %v", periods)
 
 		// 发送4小时统计推送通知
@@ -307,8 +317,8 @@ func logStats(period string) {
 		count, quantity, value, longCount, shortCount, longValue, shortValue, periods := globalStats.GetPeriodStats(8)
 		log.Printf("[%s统计] UTC时间: %s, 过去8小时清算订单数: %d, 总数量: %.4f, 总价值: %.4f",
 			period, now.Format("2006-01-02 15:04"), count, quantity, value)
-		log.Printf("   多单: %d笔 价值: %.2f USDT, 空单: %d笔 价值: %.2f USDT",
-			longCount, longValue, shortCount, shortValue)
+		log.Printf("   多单: %d笔 价值: %s USDT, 空单: %d笔 价值: %s USDT",
+			longCount, formatToWan(longValue), shortCount, formatToWan(shortValue))
 		log.Printf("   包含时段: %v", periods)
 
 		// 发送8小时统计推送通知
@@ -319,8 +329,8 @@ func logStats(period string) {
 		count, quantity, value, longCount, shortCount, longValue, shortValue, timeKey := globalStats.GetTodayStats()
 		log.Printf("[%s统计] UTC日期: %s, 从零点开始清算订单数: %d, 总数量: %.4f, 总价值: %.4f",
 			period, timeKey, count, quantity, value)
-		log.Printf("   多单: %d笔 价值: %.2f USDT, 空单: %d笔 价值: %.2f USDT",
-			longCount, longValue, shortCount, shortValue)
+		log.Printf("   多单: %d笔 价值: %s USDT, 空单: %d笔 价值: %s USDT",
+			longCount, formatToWan(longValue), shortCount, formatToWan(shortValue))
 
 		// 发送24小时统计推送通知
 		sendStatsReport(period, count, quantity, value, longCount, shortCount, longValue, shortValue, timeKey)
@@ -354,26 +364,26 @@ func sendStatsReport(period string, count int64, _ /*quantity*/, value float64, 
 	message := fmt.Sprintf("📊 %s清算统计报告\n"+
 		"时间: %s\n"+
 		"清算订单数: %d\n"+
-		"总价值: %.2f USDT\n"+
+		"总价值: %s USDT\n"+
 		"━━━━━━━━━━━━━━━━\n"+
 		"🟢 多单清算: %d笔 (%.1f%%)\n"+
-		"    价值: %.2f USDT\n"+
+		"    价值: %s USDT\n"+
 		"🔴 空单清算: %d笔 (%.1f%%)\n"+
-		"    价值: %.2f USDT",
+		"    价值: %s USDT",
 		period,
 		timeKey,
 		count,
-		value,
+		formatToWan(value),
 		longCount, longPercent,
-		longValue,
+		formatToWan(longValue),
 		shortCount, shortPercent,
-		shortValue)
+		formatToWan(shortValue))
 
 	// 发送推送通知
 	go func() {
 		client := expo.GetExpoClient()
 		if client != nil && client.GetTokenCount() > 0 {
-			err := client.Send(message)
+			err := notification.SendNotification(message, "liquidation")
 			if err != nil {
 				log.Printf("发送统计报告推送失败: %v", err)
 			} else {

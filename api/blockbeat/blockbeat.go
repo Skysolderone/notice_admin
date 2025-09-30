@@ -2,7 +2,6 @@ package data
 
 import (
 	"fmt"
-	"regexp"
 	"strings"
 	"time"
 
@@ -30,10 +29,10 @@ func BeatBlockData() (text string) {
 	if TimeLocalToUnix(item.Published) > StartNow {
 		text += "<b>" + item.Title + "</b>" + "\n"
 		msg := strings.ReplaceAll(item.Description, "BlockBeats 消息，", "")
-		re := regexp.MustCompile(`<.*?>`)
-		text += re.ReplaceAllString(msg, "")
+		// 保留 HTML 标签用于格式化显示
+		text += msg
 
-		text += "\n" + item.Published
+		text += "\n<i>" + item.Published + "</i>"
 	}
 
 	return
