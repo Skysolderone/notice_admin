@@ -218,6 +218,7 @@ func StartBinanceRSI(symbol, interval string, period int) {
 			if !ev.K.IsClosed {
 				continue
 			}
+			openPrice := toFloat(ev.K.Open)
 			closePrice := toFloat(ev.K.Close)
 			value, ready := rsi.add(closePrice)
 			if !ready {
@@ -227,6 +228,23 @@ func StartBinanceRSI(symbol, interval string, period int) {
 			msg := fmt.Sprintf("%s %s close=%.2f RSI(%d)=%.2f @ %s", strings.ToUpper(symbol), interval, closePrice, period, value, ts)
 			logx.Infof("RSI signal sent at %s: %s", time.Now().Format("2006-01-02 15:04:05"), msg)
 			notification.SendNotification(msg, "rsi")
+
+			// 检测小实体（开盘与收盘几乎相等），针对 4h/1d/1M 触发
+			// 阈值采用相对开盘价的百分比，默认 0.1%
+			if interval == "4h" || interval == "1d" || interval == "1M" {
+				// 保护：避免除零
+				denominator := math.Abs(openPrice)
+				if denominator > 0 {
+					relativeDiff := math.Abs(closePrice-openPrice) / denominator
+					threshold := 0.001 // 0.1%
+					if relativeDiff <= threshold {
+						title := "小实体告警"
+						body := fmt.Sprintf("%s %s 开收盘接近 (|O-C|/O=%.4f%%)\nO=%.2f C=%.2f @ %s", strings.ToUpper(symbol), interval, relativeDiff*100, openPrice, closePrice, ts)
+						logx.Infof("Doji-like body detected at %s: %s", time.Now().Format("2006-01-02 15:04:05"), body)
+						_ = notification.SendNotificationWithTitle(body, title, "doji")
+					}
+				}
+			}
 		}
 		// loop to reconnect
 	}

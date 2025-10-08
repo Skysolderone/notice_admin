@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-此文件为 Claude Code (claude.ai/code) 在此代码库中工作时提供指导。
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## 项目概述
 
@@ -143,10 +143,11 @@ HTTP API (端口 5555，前缀 /notice)
 - WebSocket 连接器独立处理重连和消息处理
 - 在 WebSocket 连接器中使用 sync.RWMutex 进行线程安全操作
 
-### 配置
-- 主配置在 `etc/api.yaml`（服务器、日志、示例 WebSocket 配置）
-- **重要**: WebSocket 连接在 `api/notice.go` 中硬编码（不使用配置文件）
-- go-zero 框架处理大部分服务器配置
+### 配置管理
+- **主配置**: `etc/api.yaml` 包含服务器设置（端口5555）和日志配置
+- **WebSocket 配置**: `etc/api.yaml` 中的 WebSocket 配置被忽略，实际连接在 `api/notice.go:42-62` 硬编码
+- **本地替换**: `go.mod` 中包含本地模块替换 `github.com/Skysolderone/zero_core => ../zero_core`
+- **配置加载**: 使用 go-zero 的 `conf.MustLoad()` 加载 YAML 配置
 
 ## 开发说明
 
@@ -155,19 +156,25 @@ HTTP API (端口 5555，前缀 /notice)
 - 使用 `go test ./...` 运行测试
 - 示例测试演示 Expo 通知功能
 
-### 依赖关系
-- **go-zero**: Web 框架和配置管理
-- **gorilla/websocket**: WebSocket 客户端功能
-- **oliveroneill/exponent-server-sdk-golang**: Expo 推送通知
-- **adshao/go-binance**: 币安 API 集成
-- **mmcdole/gofeed**: RSS/源解析功能
+### 关键依赖关系
+- **go-zero** v1.8.5: Web 框架和配置管理
+- **gorilla/websocket** v1.5.3: WebSocket 客户端功能
+- **9ssi7/exponent** v0.0.3: Expo 推送通知（新版本）
+- **oliveroneill/exponent-server-sdk-golang**: Expo 推送通知（备用版本）
+- **adshao/go-binance** v2.8.5: 币安 API 集成
+- **mmcdole/gofeed** v1.3.0: RSS/源解析功能
+- **shopspring/decimal** v1.4.0: 高精度数值计算
+- **google/uuid** v1.6.0: UUID 生成
+- **resty.dev/v3** v3.0.0-beta.3: HTTP 客户端
 
 ### 部署
-- Makefile 为 Linux 构建并通过 SSH 部署到远程服务器
-- 日志写入 `./logs` 目录，支持轮转
-- 服务运行在端口 5555，具有基本健康监控
+- **自动部署**: `make build` 命令会构建 Linux 版本并自动部署到远程服务器（通过 SSH 到 `wws` 主机）
+- **部署流程**: 构建 → SCP 传输二进制文件和配置 → 远程停止旧进程 → 启动新服务
+- **日志**: 写入 `./logs` 目录，支持轮转（保留7天，最大3个备份，每个文件最大500MB）
+- **服务**: 运行在端口 5555，使用 go-zero 内置健康监控
 
 ### WebSocket 连接
+- **重要**: WebSocket 连接配置在 `api/notice.go:42-62` 中硬编码，不使用 etc/api.yaml 中的配置
 - 两个硬编码连接：币安（BTC/USDT 1m K线）和 Coinbase
 - 可配置延迟和重试限制的自动重连
 - 每个连接可自定义消息处理器

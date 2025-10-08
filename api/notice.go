@@ -241,19 +241,19 @@ func main() {
 		Path:   "/push",
 		Handler: func(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("Direct push message triggered")
-			
+
 			// 从查询参数获取消息内容，如果没有则使用默认消息
 			message := r.URL.Query().Get("msg")
 			title := r.URL.Query().Get("title")
-			
+
 			if message == "" {
 				message = "这是一条测试推送消息"
 			}
-			
+
 			if title == "" {
 				title = "直接推送"
 			}
-			
+
 			// 检查是否有已注册的推送token
 			client := expo.GetExpoClient()
 			if client.GetTokenCount() == 0 {
@@ -262,10 +262,10 @@ func main() {
 				w.Write([]byte("No push tokens registered. Please register a token first."))
 				return
 			}
-			
+
 			// 记录推送日志
 			logx.Infof("Direct push triggered at %s: %s", time.Now().Format("2006-01-02 15:04:05"), message)
-			
+
 			// 发送推送消息
 			err := client.SendWithCustomTitle(message, title)
 			if err != nil {
@@ -491,10 +491,12 @@ func main() {
 	go rsi.StartBinanceRSI("btcusdt", "4h", 14)
 	go rsi.StartBinanceRSI("btcusdt", "1d", 14)
 	go rsi.StartBinanceRSI("btcusdt", "1w", 14)
+	go rsi.StartBinanceRSI("btcusdt", "1M", 14)
 	go rsi.StartBinanceRSI("ethusdt", "2h", 14)
 	go rsi.StartBinanceRSI("ethusdt", "4h", 14)
 	go rsi.StartBinanceRSI("ethusdt", "1d", 14)
 	go rsi.StartBinanceRSI("ethusdt", "1w", 14)
+	go rsi.StartBinanceRSI("ethusdt", "1M", 14)
 
 	go listen.StartListen()
 	logx.Infof("Server starting on %s:%d", c.Host, c.Port)
