@@ -1,0 +1,12 @@
+2025-10-23 00:08:14	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 00:08:14	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100
+2025-10-23 03:09:47	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 03:09:47	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100
+2025-10-23 04:45:50	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 04:45:50	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100
+2025-10-23 06:44:01	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 06:44:01	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100
+2025-10-23 06:55:11	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 06:55:11	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100
+2025-10-23 07:58:11	 error 	WebSocket read error: websocket: close 1006 (abnormal closure): unexpected EOF	caller=websocket/connector.go:180
+2025-10-23 07:58:11	 error 	WebSocket [coinbase] disconnected: websocket: close 1006 (abnormal closure): unexpected EOF	caller=api/notice.go:100

@@ -12,6 +12,16 @@ Log:
   MaxSize: 500
   Encoding: plain
   TimeFormat: 2006-01-02 15:04:05
+Database:
+  Host: pgm-bp140jpn9wct9u0t.pg.rds.aliyuncs.com
+  Port: 5432
+  User: wws
+  Password: Wws5201314
+  DBName: notice
+  SSLMode: disable
+  MaxOpenConns: 10
+  MaxIdleConns: 5
+  ConnMaxLifetime: 3600
 WebSockets:
   - Name: "main"
     URL: "wss://example.com/ws"

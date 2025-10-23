@@ -1,0 +1,438 @@
+2025-10-22 20:21:38	 stat 	CPU: 0m, MEMORY: Alloc=3.2Mi, TotalAlloc=26.7Mi, Sys=23.3Mi, NumGC=15	caller=stat/usage.go:61
+2025-10-22 20:21:44	 stat 	(api) shedding_stat [1m], cpu: 2, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:22:38	 stat 	CPU: 1m, MEMORY: Alloc=3.4Mi, TotalAlloc=35.1Mi, Sys=23.3Mi, NumGC=19	caller=stat/usage.go:61
+2025-10-22 20:22:44	 stat 	(api) shedding_stat [1m], cpu: 6, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:23:38	 stat 	CPU: 0m, MEMORY: Alloc=2.9Mi, TotalAlloc=43.0Mi, Sys=23.3Mi, NumGC=23	caller=stat/usage.go:61
+2025-10-22 20:23:44	 stat 	(api) shedding_stat [1m], cpu: 3, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:24:38	 stat 	CPU: 0m, MEMORY: Alloc=2.8Mi, TotalAlloc=50.6Mi, Sys=23.3Mi, NumGC=27	caller=stat/usage.go:61
+2025-10-22 20:24:44	 stat 	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:25:38	 stat 	CPU: 0m, MEMORY: Alloc=2.9Mi, TotalAlloc=58.8Mi, Sys=23.3Mi, NumGC=31	caller=stat/usage.go:61
+2025-10-22 20:25:44	 stat 	(api) shedding_stat [1m], cpu: 1, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:26:38	 stat 	CPU: 0m, MEMORY: Alloc=3.2Mi, TotalAlloc=67.0Mi, Sys=23.3Mi, NumGC=35	caller=stat/usage.go:61
+2025-10-22 20:26:44	 stat 	(api) shedding_stat [1m], cpu: 1, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:27:38	 stat 	CPU: 0m, MEMORY: Alloc=3.8Mi, TotalAlloc=75.5Mi, Sys=23.3Mi, NumGC=39	caller=stat/usage.go:61
+2025-10-22 20:27:44	 stat 	(api) shedding_stat [1m], cpu: 1, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:28:38	 stat 	CPU: 0m, MEMORY: Alloc=3.4Mi, TotalAlloc=83.7Mi, Sys=23.3Mi, NumGC=43	caller=stat/usage.go:61
+2025-10-22 20:28:44	 stat 	(api) shedding_stat [1m], cpu: 1, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:29:38	 stat 	CPU: 1m, MEMORY: Alloc=3.7Mi, TotalAlloc=91.8Mi, Sys=23.3Mi, NumGC=47	caller=stat/usage.go:61
+2025-10-22 20:29:44	 stat 	(api) shedding_stat [1m], cpu: 2, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:30:38	 stat 	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=99.9Mi, Sys=23.3Mi, NumGC=51	caller=stat/usage.go:61
+2025-10-22 20:30:44	 stat 	(api) shedding_stat [1m], cpu: 0, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:31:38	 stat 	CPU: 0m, MEMORY: Alloc=3.5Mi, TotalAlloc=108.1Mi, Sys=23.3Mi, NumGC=55	caller=stat/usage.go:61
+2025-10-22 20:31:44	 stat 	(api) shedding_stat [1m], cpu: 2, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:32:38	 stat 	CPU: 0m, MEMORY: Alloc=3.2Mi, TotalAlloc=116.3Mi, Sys=23.3Mi, NumGC=59	caller=stat/usage.go:61
+2025-10-22 20:32:44	 stat 	(api) shedding_stat [1m], cpu: 1, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:33:38	 stat 	CPU: 388m, MEMORY: Alloc=4.8Mi, TotalAlloc=124.1Mi, Sys=23.3Mi, NumGC=62	caller=stat/usage.go:61
+2025-10-22 20:33:44	 stat 	(api) shedding_stat [1m], cpu: 379, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:34:38	 stat 	CPU: 165m, MEMORY: Alloc=4.7Mi, TotalAlloc=132.0Mi, Sys=23.3Mi, NumGC=66	caller=stat/usage.go:61
+2025-10-22 20:34:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:35:38	 stat 	CPU: 163m, MEMORY: Alloc=4.4Mi, TotalAlloc=140.1Mi, Sys=23.3Mi, NumGC=70	caller=stat/usage.go:61
+2025-10-22 20:35:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:36:38	 stat 	CPU: 163m, MEMORY: Alloc=4.5Mi, TotalAlloc=148.0Mi, Sys=23.3Mi, NumGC=74	caller=stat/usage.go:61
+2025-10-22 20:36:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:37:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=156.5Mi, Sys=23.3Mi, NumGC=78	caller=stat/usage.go:61
+2025-10-22 20:37:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:38:38	 stat 	CPU: 164m, MEMORY: Alloc=3.3Mi, TotalAlloc=164.8Mi, Sys=23.3Mi, NumGC=82	caller=stat/usage.go:61
+2025-10-22 20:38:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:39:38	 stat 	CPU: 164m, MEMORY: Alloc=3.7Mi, TotalAlloc=173.6Mi, Sys=23.3Mi, NumGC=86	caller=stat/usage.go:61
+2025-10-22 20:39:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:40:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=182.1Mi, Sys=23.3Mi, NumGC=90	caller=stat/usage.go:61
+2025-10-22 20:40:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:41:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=190.4Mi, Sys=23.3Mi, NumGC=94	caller=stat/usage.go:61
+2025-10-22 20:41:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:42:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=199.3Mi, Sys=23.3Mi, NumGC=98	caller=stat/usage.go:61
+2025-10-22 20:42:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:43:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=208.2Mi, Sys=23.3Mi, NumGC=102	caller=stat/usage.go:61
+2025-10-22 20:43:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:44:38	 stat 	CPU: 163m, MEMORY: Alloc=3.0Mi, TotalAlloc=216.3Mi, Sys=23.3Mi, NumGC=106	caller=stat/usage.go:61
+2025-10-22 20:44:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:45:38	 stat 	CPU: 163m, MEMORY: Alloc=3.2Mi, TotalAlloc=224.6Mi, Sys=23.3Mi, NumGC=110	caller=stat/usage.go:61
+2025-10-22 20:45:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:46:38	 stat 	CPU: 165m, MEMORY: Alloc=3.3Mi, TotalAlloc=232.9Mi, Sys=23.3Mi, NumGC=114	caller=stat/usage.go:61
+2025-10-22 20:46:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:47:38	 stat 	CPU: 162m, MEMORY: Alloc=2.7Mi, TotalAlloc=240.9Mi, Sys=23.3Mi, NumGC=118	caller=stat/usage.go:61
+2025-10-22 20:47:44	 stat 	(api) shedding_stat [1m], cpu: 162, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:48:38	 stat 	CPU: 160m, MEMORY: Alloc=3.1Mi, TotalAlloc=249.4Mi, Sys=23.3Mi, NumGC=122	caller=stat/usage.go:61
+2025-10-22 20:48:44	 stat 	(api) shedding_stat [1m], cpu: 160, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:49:38	 stat 	CPU: 160m, MEMORY: Alloc=4.1Mi, TotalAlloc=257.1Mi, Sys=23.3Mi, NumGC=125	caller=stat/usage.go:61
+2025-10-22 20:49:44	 stat 	(api) shedding_stat [1m], cpu: 160, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:50:38	 stat 	CPU: 165m, MEMORY: Alloc=3.7Mi, TotalAlloc=265.2Mi, Sys=23.3Mi, NumGC=129	caller=stat/usage.go:61
+2025-10-22 20:50:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:51:38	 stat 	CPU: 163m, MEMORY: Alloc=3.8Mi, TotalAlloc=273.5Mi, Sys=23.3Mi, NumGC=133	caller=stat/usage.go:61
+2025-10-22 20:51:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:52:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=281.1Mi, Sys=23.3Mi, NumGC=137	caller=stat/usage.go:61
+2025-10-22 20:52:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:53:38	 stat 	CPU: 162m, MEMORY: Alloc=3.1Mi, TotalAlloc=289.3Mi, Sys=23.3Mi, NumGC=141	caller=stat/usage.go:61
+2025-10-22 20:53:44	 stat 	(api) shedding_stat [1m], cpu: 162, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:54:38	 stat 	CPU: 164m, MEMORY: Alloc=4.1Mi, TotalAlloc=296.8Mi, Sys=23.3Mi, NumGC=144	caller=stat/usage.go:61
+2025-10-22 20:54:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:55:38	 stat 	CPU: 164m, MEMORY: Alloc=4.0Mi, TotalAlloc=304.7Mi, Sys=23.3Mi, NumGC=148	caller=stat/usage.go:61
+2025-10-22 20:55:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:56:38	 stat 	CPU: 162m, MEMORY: Alloc=3.7Mi, TotalAlloc=312.6Mi, Sys=23.3Mi, NumGC=152	caller=stat/usage.go:61
+2025-10-22 20:56:44	 stat 	(api) shedding_stat [1m], cpu: 162, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:57:38	 stat 	CPU: 165m, MEMORY: Alloc=2.9Mi, TotalAlloc=319.8Mi, Sys=23.3Mi, NumGC=156	caller=stat/usage.go:61
+2025-10-22 20:57:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:58:38	 stat 	CPU: 164m, MEMORY: Alloc=4.1Mi, TotalAlloc=327.3Mi, Sys=23.3Mi, NumGC=159	caller=stat/usage.go:61
+2025-10-22 20:58:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 20:59:38	 stat 	CPU: 198m, MEMORY: Alloc=2.9Mi, TotalAlloc=334.9Mi, Sys=23.3Mi, NumGC=163	caller=stat/usage.go:61
+2025-10-22 20:59:44	 stat 	(api) shedding_stat [1m], cpu: 170, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:00:38	 stat 	CPU: 163m, MEMORY: Alloc=3.1Mi, TotalAlloc=343.3Mi, Sys=23.3Mi, NumGC=167	caller=stat/usage.go:61
+2025-10-22 21:00:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:01:38	 stat 	CPU: 163m, MEMORY: Alloc=4.7Mi, TotalAlloc=351.6Mi, Sys=23.3Mi, NumGC=170	caller=stat/usage.go:61
+2025-10-22 21:01:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:02:38	 stat 	CPU: 163m, MEMORY: Alloc=4.7Mi, TotalAlloc=360.2Mi, Sys=23.3Mi, NumGC=174	caller=stat/usage.go:61
+2025-10-22 21:02:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:03:38	 stat 	CPU: 165m, MEMORY: Alloc=4.5Mi, TotalAlloc=368.7Mi, Sys=23.3Mi, NumGC=178	caller=stat/usage.go:61
+2025-10-22 21:03:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:04:38	 stat 	CPU: 163m, MEMORY: Alloc=3.8Mi, TotalAlloc=377.8Mi, Sys=23.3Mi, NumGC=183	caller=stat/usage.go:61
+2025-10-22 21:04:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:05:38	 stat 	CPU: 163m, MEMORY: Alloc=3.8Mi, TotalAlloc=386.4Mi, Sys=23.3Mi, NumGC=187	caller=stat/usage.go:61
+2025-10-22 21:05:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:06:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=394.6Mi, Sys=23.3Mi, NumGC=191	caller=stat/usage.go:61
+2025-10-22 21:06:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:07:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=402.8Mi, Sys=23.3Mi, NumGC=195	caller=stat/usage.go:61
+2025-10-22 21:07:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:08:38	 stat 	CPU: 165m, MEMORY: Alloc=3.8Mi, TotalAlloc=411.0Mi, Sys=23.3Mi, NumGC=199	caller=stat/usage.go:61
+2025-10-22 21:08:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:09:38	 stat 	CPU: 168m, MEMORY: Alloc=3.7Mi, TotalAlloc=419.4Mi, Sys=23.3Mi, NumGC=204	caller=stat/usage.go:61
+2025-10-22 21:09:44	 stat 	(api) shedding_stat [1m], cpu: 167, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:10:38	 stat 	CPU: 165m, MEMORY: Alloc=2.8Mi, TotalAlloc=428.0Mi, Sys=23.3Mi, NumGC=209	caller=stat/usage.go:61
+2025-10-22 21:10:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:11:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=437.0Mi, Sys=23.3Mi, NumGC=213	caller=stat/usage.go:61
+2025-10-22 21:11:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:12:38	 stat 	CPU: 165m, MEMORY: Alloc=4.1Mi, TotalAlloc=446.4Mi, Sys=23.3Mi, NumGC=217	caller=stat/usage.go:61
+2025-10-22 21:12:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:13:38	 stat 	CPU: 164m, MEMORY: Alloc=4.7Mi, TotalAlloc=455.9Mi, Sys=23.3Mi, NumGC=221	caller=stat/usage.go:61
+2025-10-22 21:13:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:14:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=465.0Mi, Sys=23.3Mi, NumGC=226	caller=stat/usage.go:61
+2025-10-22 21:14:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:15:38	 stat 	CPU: 165m, MEMORY: Alloc=2.7Mi, TotalAlloc=474.5Mi, Sys=23.3Mi, NumGC=231	caller=stat/usage.go:61
+2025-10-22 21:15:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:16:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=483.3Mi, Sys=23.3Mi, NumGC=235	caller=stat/usage.go:61
+2025-10-22 21:16:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:17:38	 stat 	CPU: 165m, MEMORY: Alloc=3.5Mi, TotalAlloc=492.0Mi, Sys=23.3Mi, NumGC=239	caller=stat/usage.go:61
+2025-10-22 21:17:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:18:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=500.5Mi, Sys=23.3Mi, NumGC=243	caller=stat/usage.go:61
+2025-10-22 21:18:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:19:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=508.9Mi, Sys=23.3Mi, NumGC=247	caller=stat/usage.go:61
+2025-10-22 21:19:44	 stat 	(api) shedding_stat [1m], cpu: 162, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:20:38	 stat 	CPU: 164m, MEMORY: Alloc=3.7Mi, TotalAlloc=517.9Mi, Sys=23.3Mi, NumGC=251	caller=stat/usage.go:61
+2025-10-22 21:20:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:21:38	 stat 	CPU: 159m, MEMORY: Alloc=4.7Mi, TotalAlloc=526.9Mi, Sys=23.3Mi, NumGC=255	caller=stat/usage.go:61
+2025-10-22 21:21:44	 stat 	(api) shedding_stat [1m], cpu: 159, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:22:38	 stat 	CPU: 163m, MEMORY: Alloc=4.6Mi, TotalAlloc=535.6Mi, Sys=23.3Mi, NumGC=259	caller=stat/usage.go:61
+2025-10-22 21:22:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:23:38	 stat 	CPU: 163m, MEMORY: Alloc=2.8Mi, TotalAlloc=544.2Mi, Sys=23.3Mi, NumGC=264	caller=stat/usage.go:61
+2025-10-22 21:23:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:24:38	 stat 	CPU: 163m, MEMORY: Alloc=2.7Mi, TotalAlloc=552.6Mi, Sys=23.3Mi, NumGC=268	caller=stat/usage.go:61
+2025-10-22 21:24:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:25:38	 stat 	CPU: 165m, MEMORY: Alloc=2.7Mi, TotalAlloc=561.0Mi, Sys=23.3Mi, NumGC=272	caller=stat/usage.go:61
+2025-10-22 21:25:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:26:38	 stat 	CPU: 163m, MEMORY: Alloc=3.1Mi, TotalAlloc=569.4Mi, Sys=23.3Mi, NumGC=276	caller=stat/usage.go:61
+2025-10-22 21:26:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:27:38	 stat 	CPU: 163m, MEMORY: Alloc=3.2Mi, TotalAlloc=578.0Mi, Sys=23.3Mi, NumGC=280	caller=stat/usage.go:61
+2025-10-22 21:27:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:28:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=586.8Mi, Sys=23.3Mi, NumGC=284	caller=stat/usage.go:61
+2025-10-22 21:28:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:29:38	 stat 	CPU: 164m, MEMORY: Alloc=2.7Mi, TotalAlloc=594.5Mi, Sys=23.3Mi, NumGC=288	caller=stat/usage.go:61
+2025-10-22 21:29:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:30:38	 stat 	CPU: 164m, MEMORY: Alloc=2.7Mi, TotalAlloc=603.1Mi, Sys=23.3Mi, NumGC=292	caller=stat/usage.go:61
+2025-10-22 21:30:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:31:38	 stat 	CPU: 168m, MEMORY: Alloc=3.0Mi, TotalAlloc=612.1Mi, Sys=23.3Mi, NumGC=296	caller=stat/usage.go:61
+2025-10-22 21:31:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:32:38	 stat 	CPU: 164m, MEMORY: Alloc=3.7Mi, TotalAlloc=620.7Mi, Sys=23.3Mi, NumGC=300	caller=stat/usage.go:61
+2025-10-22 21:32:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:33:38	 stat 	CPU: 164m, MEMORY: Alloc=3.3Mi, TotalAlloc=630.2Mi, Sys=23.3Mi, NumGC=305	caller=stat/usage.go:61
+2025-10-22 21:33:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:34:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=638.8Mi, Sys=23.3Mi, NumGC=309	caller=stat/usage.go:61
+2025-10-22 21:34:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:35:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=647.4Mi, Sys=23.3Mi, NumGC=313	caller=stat/usage.go:61
+2025-10-22 21:35:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:36:38	 stat 	CPU: 163m, MEMORY: Alloc=3.0Mi, TotalAlloc=656.6Mi, Sys=23.3Mi, NumGC=319	caller=stat/usage.go:61
+2025-10-22 21:36:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:37:38	 stat 	CPU: 164m, MEMORY: Alloc=4.4Mi, TotalAlloc=664.9Mi, Sys=23.3Mi, NumGC=323	caller=stat/usage.go:61
+2025-10-22 21:37:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:38:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=673.9Mi, Sys=23.3Mi, NumGC=328	caller=stat/usage.go:61
+2025-10-22 21:38:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:39:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=682.7Mi, Sys=23.3Mi, NumGC=332	caller=stat/usage.go:61
+2025-10-22 21:39:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:40:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=691.4Mi, Sys=23.3Mi, NumGC=336	caller=stat/usage.go:61
+2025-10-22 21:40:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:41:38	 stat 	CPU: 163m, MEMORY: Alloc=4.0Mi, TotalAlloc=699.8Mi, Sys=23.3Mi, NumGC=340	caller=stat/usage.go:61
+2025-10-22 21:41:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:42:38	 stat 	CPU: 165m, MEMORY: Alloc=3.0Mi, TotalAlloc=708.7Mi, Sys=23.3Mi, NumGC=345	caller=stat/usage.go:61
+2025-10-22 21:42:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:43:38	 stat 	CPU: 164m, MEMORY: Alloc=3.9Mi, TotalAlloc=717.2Mi, Sys=23.3Mi, NumGC=349	caller=stat/usage.go:61
+2025-10-22 21:43:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:44:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=725.3Mi, Sys=23.3Mi, NumGC=353	caller=stat/usage.go:61
+2025-10-22 21:44:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:45:38	 stat 	CPU: 166m, MEMORY: Alloc=3.7Mi, TotalAlloc=733.6Mi, Sys=23.3Mi, NumGC=357	caller=stat/usage.go:61
+2025-10-22 21:45:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:46:38	 stat 	CPU: 164m, MEMORY: Alloc=4.2Mi, TotalAlloc=741.9Mi, Sys=23.3Mi, NumGC=361	caller=stat/usage.go:61
+2025-10-22 21:46:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:47:38	 stat 	CPU: 163m, MEMORY: Alloc=2.7Mi, TotalAlloc=750.5Mi, Sys=23.3Mi, NumGC=366	caller=stat/usage.go:61
+2025-10-22 21:47:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:48:38	 stat 	CPU: 163m, MEMORY: Alloc=4.6Mi, TotalAlloc=758.6Mi, Sys=23.3Mi, NumGC=369	caller=stat/usage.go:61
+2025-10-22 21:48:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:49:38	 stat 	CPU: 165m, MEMORY: Alloc=4.3Mi, TotalAlloc=766.9Mi, Sys=23.3Mi, NumGC=373	caller=stat/usage.go:61
+2025-10-22 21:49:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:50:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=774.9Mi, Sys=23.3Mi, NumGC=377	caller=stat/usage.go:61
+2025-10-22 21:50:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:51:38	 stat 	CPU: 163m, MEMORY: Alloc=3.8Mi, TotalAlloc=783.1Mi, Sys=23.3Mi, NumGC=381	caller=stat/usage.go:61
+2025-10-22 21:51:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:52:38	 stat 	CPU: 165m, MEMORY: Alloc=4.1Mi, TotalAlloc=791.9Mi, Sys=23.3Mi, NumGC=385	caller=stat/usage.go:61
+2025-10-22 21:52:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:53:38	 stat 	CPU: 166m, MEMORY: Alloc=4.1Mi, TotalAlloc=799.9Mi, Sys=23.3Mi, NumGC=389	caller=stat/usage.go:61
+2025-10-22 21:53:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:54:38	 stat 	CPU: 163m, MEMORY: Alloc=3.5Mi, TotalAlloc=808.2Mi, Sys=23.3Mi, NumGC=393	caller=stat/usage.go:61
+2025-10-22 21:54:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:55:38	 stat 	CPU: 163m, MEMORY: Alloc=3.7Mi, TotalAlloc=816.7Mi, Sys=23.3Mi, NumGC=397	caller=stat/usage.go:61
+2025-10-22 21:55:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:56:38	 stat 	CPU: 164m, MEMORY: Alloc=4.2Mi, TotalAlloc=825.4Mi, Sys=23.3Mi, NumGC=401	caller=stat/usage.go:61
+2025-10-22 21:56:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:57:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=834.0Mi, Sys=23.3Mi, NumGC=406	caller=stat/usage.go:61
+2025-10-22 21:57:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:58:38	 stat 	CPU: 164m, MEMORY: Alloc=4.0Mi, TotalAlloc=843.0Mi, Sys=23.3Mi, NumGC=411	caller=stat/usage.go:61
+2025-10-22 21:58:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 21:59:38	 stat 	CPU: 165m, MEMORY: Alloc=4.0Mi, TotalAlloc=852.2Mi, Sys=23.3Mi, NumGC=415	caller=stat/usage.go:61
+2025-10-22 21:59:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:00:38	 stat 	CPU: 163m, MEMORY: Alloc=4.0Mi, TotalAlloc=861.4Mi, Sys=23.3Mi, NumGC=419	caller=stat/usage.go:61
+2025-10-22 22:00:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:01:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=870.9Mi, Sys=23.3Mi, NumGC=424	caller=stat/usage.go:61
+2025-10-22 22:01:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:02:38	 stat 	CPU: 163m, MEMORY: Alloc=4.5Mi, TotalAlloc=879.9Mi, Sys=23.3Mi, NumGC=428	caller=stat/usage.go:61
+2025-10-22 22:02:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:03:38	 stat 	CPU: 165m, MEMORY: Alloc=4.8Mi, TotalAlloc=888.5Mi, Sys=23.3Mi, NumGC=432	caller=stat/usage.go:61
+2025-10-22 22:03:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:04:38	 stat 	CPU: 164m, MEMORY: Alloc=3.9Mi, TotalAlloc=897.7Mi, Sys=23.3Mi, NumGC=437	caller=stat/usage.go:61
+2025-10-22 22:04:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:05:38	 stat 	CPU: 164m, MEMORY: Alloc=3.6Mi, TotalAlloc=906.6Mi, Sys=23.3Mi, NumGC=442	caller=stat/usage.go:61
+2025-10-22 22:05:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:06:38	 stat 	CPU: 165m, MEMORY: Alloc=4.3Mi, TotalAlloc=915.5Mi, Sys=23.3Mi, NumGC=446	caller=stat/usage.go:61
+2025-10-22 22:06:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:07:38	 stat 	CPU: 163m, MEMORY: Alloc=4.3Mi, TotalAlloc=924.2Mi, Sys=23.3Mi, NumGC=450	caller=stat/usage.go:61
+2025-10-22 22:07:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:08:38	 stat 	CPU: 163m, MEMORY: Alloc=3.9Mi, TotalAlloc=932.7Mi, Sys=23.3Mi, NumGC=454	caller=stat/usage.go:61
+2025-10-22 22:08:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:09:38	 stat 	CPU: 167m, MEMORY: Alloc=3.4Mi, TotalAlloc=941.0Mi, Sys=23.3Mi, NumGC=458	caller=stat/usage.go:61
+2025-10-22 22:09:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:10:38	 stat 	CPU: 165m, MEMORY: Alloc=2.9Mi, TotalAlloc=949.4Mi, Sys=23.3Mi, NumGC=462	caller=stat/usage.go:61
+2025-10-22 22:10:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:11:38	 stat 	CPU: 164m, MEMORY: Alloc=3.1Mi, TotalAlloc=957.8Mi, Sys=23.3Mi, NumGC=466	caller=stat/usage.go:61
+2025-10-22 22:11:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:12:38	 stat 	CPU: 163m, MEMORY: Alloc=3.3Mi, TotalAlloc=966.3Mi, Sys=23.3Mi, NumGC=470	caller=stat/usage.go:61
+2025-10-22 22:12:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:13:38	 stat 	CPU: 163m, MEMORY: Alloc=2.7Mi, TotalAlloc=974.2Mi, Sys=23.3Mi, NumGC=474	caller=stat/usage.go:61
+2025-10-22 22:13:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:14:38	 stat 	CPU: 165m, MEMORY: Alloc=3.3Mi, TotalAlloc=982.6Mi, Sys=23.3Mi, NumGC=478	caller=stat/usage.go:61
+2025-10-22 22:14:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:15:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=990.8Mi, Sys=23.3Mi, NumGC=482	caller=stat/usage.go:61
+2025-10-22 22:15:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:16:38	 stat 	CPU: 163m, MEMORY: Alloc=4.6Mi, TotalAlloc=998.6Mi, Sys=23.3Mi, NumGC=485	caller=stat/usage.go:61
+2025-10-22 22:16:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:17:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1006.7Mi, Sys=23.3Mi, NumGC=489	caller=stat/usage.go:61
+2025-10-22 22:17:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:18:38	 stat 	CPU: 165m, MEMORY: Alloc=3.8Mi, TotalAlloc=1015.0Mi, Sys=23.3Mi, NumGC=493	caller=stat/usage.go:61
+2025-10-22 22:18:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:19:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1023.2Mi, Sys=23.3Mi, NumGC=497	caller=stat/usage.go:61
+2025-10-22 22:19:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:20:38	 stat 	CPU: 165m, MEMORY: Alloc=3.1Mi, TotalAlloc=1031.2Mi, Sys=23.3Mi, NumGC=501	caller=stat/usage.go:61
+2025-10-22 22:20:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:21:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=1039.4Mi, Sys=23.3Mi, NumGC=505	caller=stat/usage.go:61
+2025-10-22 22:21:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:22:38	 stat 	CPU: 165m, MEMORY: Alloc=3.3Mi, TotalAlloc=1047.9Mi, Sys=23.3Mi, NumGC=509	caller=stat/usage.go:61
+2025-10-22 22:22:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:23:38	 stat 	CPU: 165m, MEMORY: Alloc=3.5Mi, TotalAlloc=1057.0Mi, Sys=23.3Mi, NumGC=513	caller=stat/usage.go:61
+2025-10-22 22:23:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:24:38	 stat 	CPU: 163m, MEMORY: Alloc=3.9Mi, TotalAlloc=1065.9Mi, Sys=23.3Mi, NumGC=517	caller=stat/usage.go:61
+2025-10-22 22:24:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:25:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=1074.8Mi, Sys=23.3Mi, NumGC=521	caller=stat/usage.go:61
+2025-10-22 22:25:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:26:38	 stat 	CPU: 166m, MEMORY: Alloc=3.7Mi, TotalAlloc=1084.0Mi, Sys=23.3Mi, NumGC=525	caller=stat/usage.go:61
+2025-10-22 22:26:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:27:38	 stat 	CPU: 165m, MEMORY: Alloc=2.7Mi, TotalAlloc=1092.8Mi, Sys=23.3Mi, NumGC=530	caller=stat/usage.go:61
+2025-10-22 22:27:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:28:38	 stat 	CPU: 165m, MEMORY: Alloc=2.8Mi, TotalAlloc=1101.5Mi, Sys=23.3Mi, NumGC=534	caller=stat/usage.go:61
+2025-10-22 22:28:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:29:38	 stat 	CPU: 164m, MEMORY: Alloc=2.8Mi, TotalAlloc=1110.3Mi, Sys=23.3Mi, NumGC=538	caller=stat/usage.go:61
+2025-10-22 22:29:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:30:38	 stat 	CPU: 165m, MEMORY: Alloc=3.1Mi, TotalAlloc=1119.1Mi, Sys=23.3Mi, NumGC=542	caller=stat/usage.go:61
+2025-10-22 22:30:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:31:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=1128.1Mi, Sys=23.3Mi, NumGC=546	caller=stat/usage.go:61
+2025-10-22 22:31:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:32:38	 stat 	CPU: 164m, MEMORY: Alloc=4.4Mi, TotalAlloc=1137.3Mi, Sys=23.3Mi, NumGC=550	caller=stat/usage.go:61
+2025-10-22 22:32:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:33:38	 stat 	CPU: 166m, MEMORY: Alloc=3.9Mi, TotalAlloc=1146.1Mi, Sys=23.3Mi, NumGC=554	caller=stat/usage.go:61
+2025-10-22 22:33:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:34:38	 stat 	CPU: 163m, MEMORY: Alloc=3.9Mi, TotalAlloc=1155.2Mi, Sys=23.3Mi, NumGC=558	caller=stat/usage.go:61
+2025-10-22 22:34:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:35:38	 stat 	CPU: 165m, MEMORY: Alloc=4.9Mi, TotalAlloc=1164.2Mi, Sys=23.3Mi, NumGC=562	caller=stat/usage.go:61
+2025-10-22 22:35:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:36:38	 stat 	CPU: 165m, MEMORY: Alloc=3.3Mi, TotalAlloc=1173.6Mi, Sys=23.3Mi, NumGC=567	caller=stat/usage.go:61
+2025-10-22 22:36:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:37:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1182.5Mi, Sys=23.3Mi, NumGC=571	caller=stat/usage.go:61
+2025-10-22 22:37:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:38:38	 stat 	CPU: 164m, MEMORY: Alloc=4.2Mi, TotalAlloc=1190.9Mi, Sys=23.3Mi, NumGC=575	caller=stat/usage.go:61
+2025-10-22 22:38:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:39:38	 stat 	CPU: 165m, MEMORY: Alloc=3.7Mi, TotalAlloc=1199.2Mi, Sys=23.3Mi, NumGC=579	caller=stat/usage.go:61
+2025-10-22 22:39:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:40:38	 stat 	CPU: 163m, MEMORY: Alloc=3.2Mi, TotalAlloc=1207.7Mi, Sys=23.3Mi, NumGC=583	caller=stat/usage.go:61
+2025-10-22 22:40:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:41:38	 stat 	CPU: 165m, MEMORY: Alloc=4.6Mi, TotalAlloc=1216.1Mi, Sys=23.3Mi, NumGC=586	caller=stat/usage.go:61
+2025-10-22 22:41:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:42:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=1224.3Mi, Sys=23.3Mi, NumGC=590	caller=stat/usage.go:61
+2025-10-22 22:42:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:43:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=1232.8Mi, Sys=23.3Mi, NumGC=594	caller=stat/usage.go:61
+2025-10-22 22:43:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:44:38	 stat 	CPU: 164m, MEMORY: Alloc=2.8Mi, TotalAlloc=1241.7Mi, Sys=23.3Mi, NumGC=599	caller=stat/usage.go:61
+2025-10-22 22:44:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:45:38	 stat 	CPU: 164m, MEMORY: Alloc=3.0Mi, TotalAlloc=1250.2Mi, Sys=23.3Mi, NumGC=603	caller=stat/usage.go:61
+2025-10-22 22:45:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:46:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=1259.9Mi, Sys=23.3Mi, NumGC=607	caller=stat/usage.go:61
+2025-10-22 22:46:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:47:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1268.6Mi, Sys=23.3Mi, NumGC=611	caller=stat/usage.go:61
+2025-10-22 22:47:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:48:38	 stat 	CPU: 163m, MEMORY: Alloc=3.4Mi, TotalAlloc=1277.1Mi, Sys=23.3Mi, NumGC=615	caller=stat/usage.go:61
+2025-10-22 22:48:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:49:38	 stat 	CPU: 163m, MEMORY: Alloc=4.8Mi, TotalAlloc=1286.1Mi, Sys=23.3Mi, NumGC=619	caller=stat/usage.go:61
+2025-10-22 22:49:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:50:38	 stat 	CPU: 165m, MEMORY: Alloc=4.3Mi, TotalAlloc=1294.8Mi, Sys=23.3Mi, NumGC=623	caller=stat/usage.go:61
+2025-10-22 22:50:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:51:38	 stat 	CPU: 163m, MEMORY: Alloc=4.4Mi, TotalAlloc=1303.5Mi, Sys=23.3Mi, NumGC=627	caller=stat/usage.go:61
+2025-10-22 22:51:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:52:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1311.9Mi, Sys=23.3Mi, NumGC=631	caller=stat/usage.go:61
+2025-10-22 22:52:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:53:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1320.1Mi, Sys=23.3Mi, NumGC=635	caller=stat/usage.go:61
+2025-10-22 22:53:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:54:38	 stat 	CPU: 163m, MEMORY: Alloc=3.5Mi, TotalAlloc=1328.1Mi, Sys=23.3Mi, NumGC=639	caller=stat/usage.go:61
+2025-10-22 22:54:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:55:38	 stat 	CPU: 165m, MEMORY: Alloc=2.8Mi, TotalAlloc=1336.5Mi, Sys=23.3Mi, NumGC=643	caller=stat/usage.go:61
+2025-10-22 22:55:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:56:38	 stat 	CPU: 163m, MEMORY: Alloc=2.6Mi, TotalAlloc=1345.4Mi, Sys=23.3Mi, NumGC=647	caller=stat/usage.go:61
+2025-10-22 22:56:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:57:38	 stat 	CPU: 166m, MEMORY: Alloc=4.8Mi, TotalAlloc=1354.1Mi, Sys=23.3Mi, NumGC=650	caller=stat/usage.go:61
+2025-10-22 22:57:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:58:38	 stat 	CPU: 165m, MEMORY: Alloc=4.6Mi, TotalAlloc=1363.1Mi, Sys=23.3Mi, NumGC=654	caller=stat/usage.go:61
+2025-10-22 22:58:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 22:59:38	 stat 	CPU: 165m, MEMORY: Alloc=4.8Mi, TotalAlloc=1372.4Mi, Sys=23.3Mi, NumGC=658	caller=stat/usage.go:61
+2025-10-22 22:59:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:00:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=1381.6Mi, Sys=23.3Mi, NumGC=663	caller=stat/usage.go:61
+2025-10-22 23:00:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:01:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=1390.9Mi, Sys=23.3Mi, NumGC=667	caller=stat/usage.go:61
+2025-10-22 23:01:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:02:38	 stat 	CPU: 163m, MEMORY: Alloc=3.8Mi, TotalAlloc=1399.7Mi, Sys=23.3Mi, NumGC=671	caller=stat/usage.go:61
+2025-10-22 23:02:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:03:38	 stat 	CPU: 165m, MEMORY: Alloc=3.7Mi, TotalAlloc=1408.5Mi, Sys=23.3Mi, NumGC=675	caller=stat/usage.go:61
+2025-10-22 23:03:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:04:38	 stat 	CPU: 164m, MEMORY: Alloc=3.3Mi, TotalAlloc=1417.2Mi, Sys=23.3Mi, NumGC=679	caller=stat/usage.go:61
+2025-10-22 23:04:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:05:38	 stat 	CPU: 165m, MEMORY: Alloc=3.1Mi, TotalAlloc=1425.7Mi, Sys=23.3Mi, NumGC=683	caller=stat/usage.go:61
+2025-10-22 23:05:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:06:38	 stat 	CPU: 164m, MEMORY: Alloc=3.6Mi, TotalAlloc=1434.8Mi, Sys=23.3Mi, NumGC=687	caller=stat/usage.go:61
+2025-10-22 23:06:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:07:38	 stat 	CPU: 165m, MEMORY: Alloc=4.5Mi, TotalAlloc=1444.0Mi, Sys=23.3Mi, NumGC=691	caller=stat/usage.go:61
+2025-10-22 23:07:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:08:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=1452.6Mi, Sys=23.3Mi, NumGC=695	caller=stat/usage.go:61
+2025-10-22 23:08:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:09:38	 stat 	CPU: 163m, MEMORY: Alloc=3.5Mi, TotalAlloc=1461.2Mi, Sys=23.3Mi, NumGC=699	caller=stat/usage.go:61
+2025-10-22 23:09:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:10:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=1470.0Mi, Sys=23.3Mi, NumGC=703	caller=stat/usage.go:61
+2025-10-22 23:10:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:11:38	 stat 	CPU: 163m, MEMORY: Alloc=3.7Mi, TotalAlloc=1478.6Mi, Sys=23.3Mi, NumGC=707	caller=stat/usage.go:61
+2025-10-22 23:11:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:12:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=1487.1Mi, Sys=23.3Mi, NumGC=711	caller=stat/usage.go:61
+2025-10-22 23:12:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:13:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=1495.6Mi, Sys=23.3Mi, NumGC=715	caller=stat/usage.go:61
+2025-10-22 23:13:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:14:38	 stat 	CPU: 164m, MEMORY: Alloc=2.9Mi, TotalAlloc=1503.7Mi, Sys=23.3Mi, NumGC=719	caller=stat/usage.go:61
+2025-10-22 23:14:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:15:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=1512.3Mi, Sys=23.3Mi, NumGC=723	caller=stat/usage.go:61
+2025-10-22 23:15:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:16:38	 stat 	CPU: 164m, MEMORY: Alloc=3.5Mi, TotalAlloc=1521.3Mi, Sys=23.3Mi, NumGC=727	caller=stat/usage.go:61
+2025-10-22 23:16:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:17:38	 stat 	CPU: 165m, MEMORY: Alloc=3.8Mi, TotalAlloc=1530.3Mi, Sys=23.3Mi, NumGC=731	caller=stat/usage.go:61
+2025-10-22 23:17:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:18:38	 stat 	CPU: 165m, MEMORY: Alloc=3.9Mi, TotalAlloc=1539.1Mi, Sys=23.3Mi, NumGC=735	caller=stat/usage.go:61
+2025-10-22 23:18:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:19:38	 stat 	CPU: 163m, MEMORY: Alloc=3.5Mi, TotalAlloc=1547.5Mi, Sys=23.3Mi, NumGC=739	caller=stat/usage.go:61
+2025-10-22 23:19:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:20:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=1555.5Mi, Sys=23.3Mi, NumGC=743	caller=stat/usage.go:61
+2025-10-22 23:20:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:21:38	 stat 	CPU: 164m, MEMORY: Alloc=2.8Mi, TotalAlloc=1564.1Mi, Sys=23.3Mi, NumGC=747	caller=stat/usage.go:61
+2025-10-22 23:21:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:22:38	 stat 	CPU: 164m, MEMORY: Alloc=4.4Mi, TotalAlloc=1572.2Mi, Sys=23.3Mi, NumGC=750	caller=stat/usage.go:61
+2025-10-22 23:22:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:23:38	 stat 	CPU: 163m, MEMORY: Alloc=4.5Mi, TotalAlloc=1581.2Mi, Sys=23.3Mi, NumGC=754	caller=stat/usage.go:61
+2025-10-22 23:23:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:24:38	 stat 	CPU: 164m, MEMORY: Alloc=4.1Mi, TotalAlloc=1589.5Mi, Sys=23.3Mi, NumGC=758	caller=stat/usage.go:61
+2025-10-22 23:24:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:25:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1598.2Mi, Sys=23.3Mi, NumGC=762	caller=stat/usage.go:61
+2025-10-22 23:25:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:26:38	 stat 	CPU: 165m, MEMORY: Alloc=3.4Mi, TotalAlloc=1606.9Mi, Sys=23.3Mi, NumGC=766	caller=stat/usage.go:61
+2025-10-22 23:26:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:27:38	 stat 	CPU: 165m, MEMORY: Alloc=4.3Mi, TotalAlloc=1614.8Mi, Sys=23.3Mi, NumGC=769	caller=stat/usage.go:61
+2025-10-22 23:27:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:28:38	 stat 	CPU: 164m, MEMORY: Alloc=4.4Mi, TotalAlloc=1623.1Mi, Sys=23.3Mi, NumGC=773	caller=stat/usage.go:61
+2025-10-22 23:28:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:29:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=1631.4Mi, Sys=23.3Mi, NumGC=778	caller=stat/usage.go:61
+2025-10-22 23:29:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:30:38	 stat 	CPU: 164m, MEMORY: Alloc=4.0Mi, TotalAlloc=1639.8Mi, Sys=23.3Mi, NumGC=782	caller=stat/usage.go:61
+2025-10-22 23:30:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:31:38	 stat 	CPU: 165m, MEMORY: Alloc=4.8Mi, TotalAlloc=1648.3Mi, Sys=23.3Mi, NumGC=786	caller=stat/usage.go:61
+2025-10-22 23:31:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:32:38	 stat 	CPU: 163m, MEMORY: Alloc=4.2Mi, TotalAlloc=1656.8Mi, Sys=23.3Mi, NumGC=790	caller=stat/usage.go:61
+2025-10-22 23:32:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:33:38	 stat 	CPU: 164m, MEMORY: Alloc=4.5Mi, TotalAlloc=1665.7Mi, Sys=23.3Mi, NumGC=794	caller=stat/usage.go:61
+2025-10-22 23:33:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:34:38	 stat 	CPU: 164m, MEMORY: Alloc=3.0Mi, TotalAlloc=1674.5Mi, Sys=23.3Mi, NumGC=799	caller=stat/usage.go:61
+2025-10-22 23:34:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:35:38	 stat 	CPU: 165m, MEMORY: Alloc=3.2Mi, TotalAlloc=1682.8Mi, Sys=23.3Mi, NumGC=803	caller=stat/usage.go:61
+2025-10-22 23:35:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:36:38	 stat 	CPU: 164m, MEMORY: Alloc=3.1Mi, TotalAlloc=1690.9Mi, Sys=23.3Mi, NumGC=807	caller=stat/usage.go:61
+2025-10-22 23:36:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:37:38	 stat 	CPU: 165m, MEMORY: Alloc=4.6Mi, TotalAlloc=1698.8Mi, Sys=23.3Mi, NumGC=810	caller=stat/usage.go:61
+2025-10-22 23:37:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:38:38	 stat 	CPU: 165m, MEMORY: Alloc=3.3Mi, TotalAlloc=1706.5Mi, Sys=23.3Mi, NumGC=814	caller=stat/usage.go:61
+2025-10-22 23:38:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:39:38	 stat 	CPU: 164m, MEMORY: Alloc=3.3Mi, TotalAlloc=1715.4Mi, Sys=23.3Mi, NumGC=818	caller=stat/usage.go:61
+2025-10-22 23:39:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:40:38	 stat 	CPU: 164m, MEMORY: Alloc=3.0Mi, TotalAlloc=1724.0Mi, Sys=23.3Mi, NumGC=822	caller=stat/usage.go:61
+2025-10-22 23:40:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:41:38	 stat 	CPU: 163m, MEMORY: Alloc=3.1Mi, TotalAlloc=1733.0Mi, Sys=23.3Mi, NumGC=826	caller=stat/usage.go:61
+2025-10-22 23:41:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:42:38	 stat 	CPU: 166m, MEMORY: Alloc=4.5Mi, TotalAlloc=1741.2Mi, Sys=23.3Mi, NumGC=829	caller=stat/usage.go:61
+2025-10-22 23:42:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:43:38	 stat 	CPU: 165m, MEMORY: Alloc=3.6Mi, TotalAlloc=1749.2Mi, Sys=23.3Mi, NumGC=833	caller=stat/usage.go:61
+2025-10-22 23:43:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:44:38	 stat 	CPU: 164m, MEMORY: Alloc=4.8Mi, TotalAlloc=1757.2Mi, Sys=23.3Mi, NumGC=836	caller=stat/usage.go:61
+2025-10-22 23:44:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:45:38	 stat 	CPU: 163m, MEMORY: Alloc=4.1Mi, TotalAlloc=1765.3Mi, Sys=23.3Mi, NumGC=840	caller=stat/usage.go:61
+2025-10-22 23:45:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:46:38	 stat 	CPU: 163m, MEMORY: Alloc=4.1Mi, TotalAlloc=1773.7Mi, Sys=23.3Mi, NumGC=844	caller=stat/usage.go:61
+2025-10-22 23:46:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:47:38	 stat 	CPU: 163m, MEMORY: Alloc=4.2Mi, TotalAlloc=1782.4Mi, Sys=23.3Mi, NumGC=848	caller=stat/usage.go:61
+2025-10-22 23:47:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:48:38	 stat 	CPU: 164m, MEMORY: Alloc=3.8Mi, TotalAlloc=1790.6Mi, Sys=23.3Mi, NumGC=852	caller=stat/usage.go:61
+2025-10-22 23:48:44	 stat 	(api) shedding_stat [1m], cpu: 164, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:49:38	 stat 	CPU: 166m, MEMORY: Alloc=3.5Mi, TotalAlloc=1798.7Mi, Sys=23.3Mi, NumGC=856	caller=stat/usage.go:61
+2025-10-22 23:49:44	 stat 	(api) shedding_stat [1m], cpu: 166, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:50:38	 stat 	CPU: 165m, MEMORY: Alloc=4.7Mi, TotalAlloc=1806.6Mi, Sys=23.3Mi, NumGC=859	caller=stat/usage.go:61
+2025-10-22 23:50:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:51:38	 stat 	CPU: 163m, MEMORY: Alloc=3.6Mi, TotalAlloc=1814.7Mi, Sys=23.3Mi, NumGC=863	caller=stat/usage.go:61
+2025-10-22 23:51:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:52:38	 stat 	CPU: 163m, MEMORY: Alloc=4.3Mi, TotalAlloc=1822.1Mi, Sys=23.3Mi, NumGC=866	caller=stat/usage.go:61
+2025-10-22 23:52:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:53:38	 stat 	CPU: 163m, MEMORY: Alloc=2.8Mi, TotalAlloc=1829.8Mi, Sys=23.3Mi, NumGC=870	caller=stat/usage.go:61
+2025-10-22 23:53:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:54:38	 stat 	CPU: 163m, MEMORY: Alloc=4.2Mi, TotalAlloc=1837.5Mi, Sys=23.3Mi, NumGC=873	caller=stat/usage.go:61
+2025-10-22 23:54:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:55:38	 stat 	CPU: 163m, MEMORY: Alloc=4.5Mi, TotalAlloc=1845.2Mi, Sys=23.3Mi, NumGC=876	caller=stat/usage.go:61
+2025-10-22 23:55:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:56:38	 stat 	CPU: 164m, MEMORY: Alloc=3.4Mi, TotalAlloc=1852.9Mi, Sys=23.3Mi, NumGC=880	caller=stat/usage.go:61
+2025-10-22 23:56:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:57:38	 stat 	CPU: 163m, MEMORY: Alloc=4.7Mi, TotalAlloc=1860.8Mi, Sys=23.3Mi, NumGC=883	caller=stat/usage.go:61
+2025-10-22 23:57:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:58:38	 stat 	CPU: 163m, MEMORY: Alloc=3.2Mi, TotalAlloc=1868.1Mi, Sys=23.3Mi, NumGC=887	caller=stat/usage.go:61
+2025-10-22 23:58:44	 stat 	(api) shedding_stat [1m], cpu: 163, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61
+2025-10-22 23:59:38	 stat 	CPU: 165m, MEMORY: Alloc=3.7Mi, TotalAlloc=1875.5Mi, Sys=23.3Mi, NumGC=890	caller=stat/usage.go:61
+2025-10-22 23:59:44	 stat 	(api) shedding_stat [1m], cpu: 165, total: 0, pass: 0, drop: 0	caller=load/sheddingstat.go:61

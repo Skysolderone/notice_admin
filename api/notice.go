@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"notice/api/config"
+	"notice/api/database"
 	"notice/api/expo"
 	"notice/api/listen"
 	"notice/api/margin_push"
@@ -36,6 +37,23 @@ func main() {
 	// 确保日志目录存在
 	if err := os.MkdirAll("./logs", 0o755); err != nil {
 		fmt.Printf("Failed to create logs directory: %v\n", err)
+	}
+
+	// 初始化数据库连接
+	if c.Database.Host != "" {
+		if err := database.InitDB(c.Database); err != nil {
+			logx.Errorf("Failed to initialize database: %v", err)
+			// 如果数据库连接失败，记录错误但不中断程序启动
+		} else {
+			logx.Info("Database initialized successfully")
+			// 可以在这里执行数据库表迁移
+			// err := database.AutoMigrate(&YourModel{})
+			// if err != nil {
+			//     logx.Errorf("Failed to migrate database: %v", err)
+			// }
+		}
+	} else {
+		logx.Info("Database configuration not found, skipping database initialization")
 	}
 
 	// 直接写死的WebSocket连接配置
@@ -95,6 +113,12 @@ func main() {
 		for name, connector := range wsConnectors {
 			logx.Infof("Closing WebSocket connector: %s", name)
 			connector.Close()
+		}
+		// 关闭数据库连接
+		if err := database.CloseDB(); err != nil {
+			logx.Errorf("Failed to close database: %v", err)
+		} else {
+			logx.Info("Database closed successfully")
 		}
 	}()
 
