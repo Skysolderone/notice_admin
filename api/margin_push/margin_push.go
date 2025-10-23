@@ -193,9 +193,18 @@ func NewStats() *Stats {
 
 var globalStats = NewStats()
 
-// formatToWan 将USDT金额转换为万单位显示
+// formatToWan 将USDT金额转换为合适的单位显示（亿、千万、万）
 func formatToWan(value float64) string {
-	if value >= 10000 {
+	if value >= 100000000 {
+		// 大于等于1亿，显示为亿单位
+		yi := value / 100000000
+		return fmt.Sprintf("%.2f亿", yi)
+	} else if value >= 10000000 {
+		// 大于等于1千万，显示为千万单位
+		qianwan := value / 10000000
+		return fmt.Sprintf("%.2f千万", qianwan)
+	} else if value >= 10000 {
+		// 大于等于1万，显示为万单位
 		wan := value / 10000
 		return fmt.Sprintf("%.2fw", wan)
 	}
@@ -497,8 +506,63 @@ func ForceReceive() {
 		// 记录统计数据
 		globalStats.AddLiquidation(event)
 	}
+
+	// 错误计数器，避免频繁发送错误通知
+	var errorCount int
+	var lastErrorTime time.Time
+	var errorMutex sync.Mutex
+
 	errHandler := func(err error) {
 		log.Printf("WebSocket错误: %v", err)
+
+		// 发送错误通知
+		go func() {
+			errorMutex.Lock()
+			defer errorMutex.Unlock()
+
+			now := time.Now()
+			// 如果距离上次错误通知超过5分钟，重置计数器
+			if now.Sub(lastErrorTime) > 5*time.Minute {
+				errorCount = 0
+			}
+
+			errorCount++
+			lastErrorTime = now
+
+			// 只在前3次错误时发送通知，避免刷屏
+			if errorCount <= 3 {
+				message := fmt.Sprintf("⚠️ 清算监控连接异常\n"+
+					"时间: %s\n"+
+					"错误: %v\n"+
+					"错误次数: %d\n"+
+					"状态: 系统将自动尝试重连",
+					now.Format("2006-01-02 15:04:05"),
+					err,
+					errorCount)
+
+				client := expo.GetExpoClient()
+				if client != nil && client.GetTokenCount() > 0 {
+					notifyErr := notification.SendNotificationWithTitle(message, "清算监控告警", "liquidation")
+					if notifyErr != nil {
+						log.Printf("发送错误通知失败: %v", notifyErr)
+					} else {
+						log.Printf("已发送清算连接错误通知")
+					}
+				}
+			} else if errorCount == 4 {
+				// 第4次错误时发送"停止通知"的提示
+				message := fmt.Sprintf("⚠️ 清算监控持续异常\n"+
+					"时间: %s\n"+
+					"已暂停错误通知推送\n"+
+					"系统将继续尝试重连",
+					now.Format("2006-01-02 15:04:05"))
+
+				client := expo.GetExpoClient()
+				if client != nil && client.GetTokenCount() > 0 {
+					notification.SendNotificationWithTitle(message, "清算监控告警", "liquidation")
+				}
+			}
+		}()
 	}
 
 	log.Println("开始监听清算订单...")
@@ -506,6 +570,25 @@ func ForceReceive() {
 	doneC, _, err := futures.WsAllLiquidationOrderServe(wsLiquidationOrderHandler, errHandler)
 	if err != nil {
 		log.Printf("启动WebSocket失败: %v", err)
+
+		// 发送启动失败通知
+		go func() {
+			message := fmt.Sprintf("❌ 清算监控启动失败\n"+
+				"时间: %s\n"+
+				"错误: %v\n"+
+				"请检查网络连接和币安API状态",
+				time.Now().Format("2006-01-02 15:04:05"),
+				err)
+
+			client := expo.GetExpoClient()
+			if client != nil && client.GetTokenCount() > 0 {
+				notifyErr := notification.SendNotificationWithTitle(message, "清算监控启动失败", "liquidation")
+				if notifyErr != nil {
+					log.Printf("发送启动失败通知失败: %v", notifyErr)
+				}
+			}
+		}()
+
 		return
 	}
 

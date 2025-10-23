@@ -20,6 +20,7 @@ import (
 
 	"notice/api/websocket"
 
+	gorillaws "github.com/gorilla/websocket"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/rest"
@@ -66,14 +67,6 @@ func main() {
 			PingInterval:     30,
 			HandshakeTimeout: 10,
 		},
-		{
-			Name:             "coinbase",
-			URL:              "wss://ws-feed.exchange.coinbase.com",
-			ReconnectDelay:   3,
-			MaxReconnects:    0,
-			PingInterval:     25,
-			HandshakeTimeout: 10,
-		},
 	}
 
 	// 初始化多个WebSocket连接器
@@ -97,7 +90,10 @@ func main() {
 
 		// 设置断开回调
 		connector.SetOnDisconnect(func(err error) {
-			logx.Errorf("WebSocket [%s] disconnected: %v", wsConfig.Name, err)
+			// 忽略正常关闭的错误
+			if err != nil && !gorillaws.IsCloseError(err, gorillaws.CloseNormalClosure, gorillaws.CloseGoingAway) {
+				logx.Errorf("WebSocket [%s] disconnected: %v", wsConfig.Name, err)
+			}
 		})
 
 		// 启动连接器
